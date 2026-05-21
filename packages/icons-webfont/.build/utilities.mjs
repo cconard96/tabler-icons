@@ -295,8 +295,6 @@ export async function generateFont(strokeName, type, DIR) {
   mkdirSync(path.join(DIR, 'dist/fonts'), { recursive: true });
 
   writeFileSync(path.join(DIR, `dist/fonts/${fileName}.svg`), svgFontFileSource); // for debug
-  writeFileSync(path.join(DIR, `dist/fonts/${fileName}.ttf`), ttfFile);
-  writeFileSync(path.join(DIR, `dist/fonts/${fileName}.woff`), woffFile);
   writeFileSync(path.join(DIR, `dist/fonts/${fileName}.woff2`), woff2File);
 
   const glyphs = svgFiles.map(f => ({
